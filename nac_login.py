@@ -1,27 +1,34 @@
+  GNU nano 5.4                                                                                          nac.py
 import sys
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.common.by import By
 
+options = FirefoxOptions()
+options.add_argument('-headless')
 
-options = webdriver.FirefoxOptions()
-options.headless = True
-driver = webdriver.Firefox(executable_path="/usr/local/bin/geckodriver",options=options)
-try: 
-	driver.get("Replace_with_captive_link")
+firefox_driver_path = "/PATH/TO/geckodriver"
+service = Service(executable_path=firefox_driver_path)
+
+driver = webdriver.Firefox(service=service, options=options)
+
+try:
+    driver.get("https://nac.nitk.ac.in:8090/")
 except:
-	sys.exit(0)
+    sys.exit(0)
 
-username = driver.find_element_by_name("username")
+username = driver.find_element(By.NAME, "username")
 username.clear()
 
-password = driver.find_element_by_name("password")
+password = driver.find_element(By.NAME, "password")
 password.clear()
 
-username.send_keys("Replace with credential-username")
-password.send_keys("Replace with credential-password")
+username.send_keys("ENTERTHEUSERNAMEHERE")
+password.send_keys("ENTERTHEPASSWORDHERE")
 
-driver.find_element_by_id("loginbutton").click()
+driver.find_element(By.ID, "loginbutton").click()
 
-print ("Logged In.")
+print("Logged In.")
 
 driver.close()
