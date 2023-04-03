@@ -44,7 +44,7 @@ A Browser pops up (and stays without any errors)
 
 1. Clone the Repo
 ```
-git clone https://github.com/G1-k/Sophos-Captive-Portal-Autologin.git
+git clone https://github.com/esmanish/nac_login.git
 ```
 Move both python and shell script to home folder
 
