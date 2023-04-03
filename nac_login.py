@@ -1,4 +1,3 @@
-  GNU nano 5.4                                                                                          nac.py
 import sys
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
