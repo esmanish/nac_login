@@ -25,7 +25,6 @@ https://github.com/mozilla/geckodriver/releases/download/v0.21.0/geckodriver-v0.
 2. Extract the downloaded file
 ```
 tar -xzvf geckodriver-v0.21.0-arm7hf.tar.gz
-cd geckodriver-v0.21.0-arm7hf.tar.gz
 ```
 
 3. Copy file to /usr/local/bin
