@@ -74,4 +74,4 @@ sudo crontab -e
 ```
 
 3. Reboot
-After reboot pi will automatically connect to the nac
+After reboot pi will automatically connect to the nac.
